@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BearEsate</title>
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ]
+  }
+  ```
+-->
+    <div class="relative bg-gray-800 overflow-hidden">
+        <div class="relative pt-6 pb-16 sm:pb-24">
+            <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+                <div class="flex items-center flex-1">
+                    <div class="flex items-center justify-between w-full md:w-auto">
+                        <a href="index.html">
+                            <span class="sr-only">BearPlex</span>
+                            <img class="h-8 w-auto sm:h-10" src="./assets/images/BearPlex-Logo.png" alt="">
+                        </a>
+                        <div class="-mr-2 flex items-center md:hidden">
+                            <button type="button" id="OpenSidebar"
+                                class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700"
+                                aria-expanded="false">
+                                <span class="sr-only">BearPlex</span>
+                                <!-- Heroicon name: outline/menu -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="relative hidden space-x-10 md:flex mx-auto">
+                        <div class="relative">
+                            <button type="button" id="ProjectDropDownButton"
+                                class="relative text-white group bg-gray-800 rounded-md inline-flex items-center text-base font-medium hover:text-gray-300"
+                                aria-expanded="false">
+                                <span>Project</span>
+                                <svg class="text-white ml-2 h-5 w-5 group-hover:text-gray-500"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div id="ProjectDropDown"
+                                class="hidden absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                                <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                    <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                        <a href="Pricing.html"
+                                            class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <!-- Heroicon name: outline/chart-bar -->
+                                            <img src="./assets/images/al-jalil-logo.png" alt="">
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900 ml-3">
+                                                    West Marina - Al Noor Orchard
+                                                </p>
+                                                <p class="mt-1 text-sm text-gray-500 ml-3">
+                                                    Placed on Main Sharakpur Road. A Project of Al Jalil Developers.
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <!-- Heroicon name: outline/cursor-click -->
+                                            <img src="./assets/images/lahore-city.png" alt="">
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">
+                                                    Lahore Smart City
+                                                </p>
+                                                <p class="mt-1 text-sm text-gray-500">
+                                                    A Project of Habib Rafiq (Pvt.)Ltd, on Lahore Ring Road &amp; M11
+                                                    Motorway
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <!-- Heroicon name: outline/shield-check -->
+                                            <img src="./assets/images/kaneez-logo.png" alt="">
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900 ml-7">
+                                                    Kings Park Gwadar
+                                                </p>
+                                                <p class="mt-1 text-sm text-gray-500 ml-7">
+                                                    A Category NOC, approved by GDA. Located at Gwadar 'Zero point' with
+                                                    3 years plans.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="px-5 py-5 bg-gray-50 space-y-6 flex justify-center sm:space-y-0 sm:space-x-10 sm:px-8">
+                                        <div class="flow-root">
+                                            <a href="tel:+923202000002" target="_blank"
+                                                class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
+                                                <!-- Heroicon name: outline/phone -->
+                                                <svg class="flex-shrink-0 h-6 w-6 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                                    </path>
+                                                </svg>
+                                                <span class="ml-3">Contact Sales</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="about.html" class="font-medium text-white hover:text-gray-300">About</a>
+
+                        <a href="sign-in.html" class="font-medium text-white hover:text-gray-300">Client Portal</a>
+
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <a href="Contact-us.html"
+                    class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-600 hover:bg-teal-700">
+                    Get In Touch
+                </a>
+            </nav>
+
+            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden" id="MobileSidebar">
+                <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div class="px-5 pt-4 flex items-center justify-between">
+                        <a href="index.html">
+                            <span class="sr-only">BearPlex</span>
+
+                            <img class="h-8 w-auto" src="./assets/images/Bearplex-logo-black.png" alt="">
+                        </a>
+                        <div class="-mr-2">
+                            <button type="button" id="CloseSidebar"
+                                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100">
+                                <span class="sr-only">Close menu</span>
+                                <!-- Heroicon name: outline/x -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-2 pt-2 pb-3 space-y-1">
+                        <div class="px-3 relative">
+                            <button type="button" id="ProjectDropDownButtonMob"
+                                class="text-gray-900 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-700 focus:outline-none "
+                                aria-expanded="false">
+                                <span>Project</span>
+                                <svg class="text-gray-900 ml-2 h-5 w-5 group-hover:text-gray-700"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div id="ProjectDropDownMob" class="hidden relative z-10 -ml-4 mt-3 transform px-2 w-full">
+                                <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                    <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                        <a href="Pricing.html"
+                                            class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <!-- Heroicon name: outline/chart-bar -->
+                                            <img src="./assets/images/al-jalil-logo.png" alt="">
+                                            <div class="ml-4">
+                                                <p class="text-sm font-medium text-gray-900 ml-3">
+                                                    West Marina - Al Noor Orchard
+                                                </p>
+                                                <p class="mt-1 text-xs text-gray-500 ml-3">
+                                                    Placed on Main Sharakpur Road. A Project of Al Jalil Developers.
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <!-- Heroicon name: outline/cursor-click -->
+                                            <img src="./assets/images/lahore-city.png" alt="">
+                                            <div class="ml-4">
+                                                <p class="text-sm font-medium text-gray-900">
+                                                    Lahore Smart City
+                                                </p>
+                                                <p class="mt-1 text-xs text-gray-500">
+                                                    A Project of Habib Rafiq (Pvt.)Ltd, on Lahore Ring Road &amp; M11
+                                                    Motorway
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <!-- Heroicon name: outline/shield-check -->
+                                            <img src="./assets/images/kaneez-logo.png" alt="">
+                                            <div class="ml-4">
+                                                <p class="text-sm font-medium text-gray-900 ml-7">
+                                                    Kings Park Gwadar
+                                                </p>
+                                                <p class="mt-1 text-xs text-gray-500 ml-7">
+                                                    A Category NOC, approved by GDA. Located at Gwadar 'Zero point' with
+                                                    3 years plans.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="px-5 py-5 bg-gray-50 space-y-6 flex justify-center sm:space-y-0 sm:space-x-10 sm:px-8">
+                                        <div class="flow-root">
+                                            <a href="tel:+923202000002" target="_blank"
+                                                class="-m-3 p-3 flex items-center rounded-md text-xs font-medium text-gray-900 hover:bg-gray-100">
+                                                <!-- Heroicon name: outline/phone -->
+                                                <svg class="flex-shrink-0 h-6 w-6 text-gray-400"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                                    </path>
+                                                </svg>
+                                                <span class="ml-3">Contact Sales</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="about.html"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+
+                        <a href="sign-in.html"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900
+                            hover:bg-gray-50">Client
+                            Portal</a>
+
+                    </div>
+                    <a href="contact-us.html"
+                        class="block w-full px-5 py-3 text-center font-medium text-black bg-gray-50 hover:bg-gray-100">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+
+            <main class="mt-16 sm:mt-24">
+                <div class="mx-auto max-w-7xl">
+                    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                        <div
+                            class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+                            <div>
+                                <a href="Pricing.html"
+                                    class="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 text-ms lg:text-sm xl:text-base hover:text-gray-200">
+                                    <span
+                                        class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-teal-600 rounded-full">Prices
+                                        raising soon</span>
+                                    <span class="ml-4 text-sm">West Marina (Al Noor Orchard)</span>
+                                    <!-- Heroicon name: solid/chevron-right -->
+                                    <svg class="ml-2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                                <h1
+                                    class="mt-4 text-3xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+                                    <span class="md:block">Finding you your</span> <br>
+                                    <span class="text-teal-500 md:block">property dream</span>
+                                </h1>
+                                <p class="mt-3 text-sm text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                                    BearEstate is committed to finding your dream home. Let us manage your real estate
+                                    portfolio & take it to another level. </p>
+                                <p class="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">
+                                    affiliated with</p>
+                                <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
+                                    <div class="flex flex-wrap items-start justify-between">
+                                        <div class="flex justify-center px-1">
+                                            <img class="h-9 sm:h-10" src="./assets/images/Al-NoorOrchard.svg"
+                                                alt="Tuple">
+                                        </div>
+                                        <div class="flex justify-center px-1">
+                                            <img class="h-9 sm:h-10" src="./assets/images/Al-Jalil.svg"
+                                                alt="Workcation">
+                                        </div>
+                                        <div class="flex justify-center px-1">
+                                            <img class="h-9 sm:h-10" src="./assets/images/WestMarina.svg"
+                                                alt="StaticKit">
+                                        </div>
+                                        <div class="flex justify-center px-1">
+                                            <img class="h-9 sm:h-10" src="./assets/images/HRL.svg" alt="StaticKit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-16  px-5 sm:mt-24 lg:mt-0 lg:col-span-6 mx-auto md:ml-auto md:mr-0">
+                            <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto rounded-lg sm:overflow-hidden">
+                                <div class="px-4 py-8 sm:px-10">
+                                    <div class="mt-6">
+                                        <form action="#" method="POST" class="space-y-6">
+                                            <div>
+                                                <label for="name" class="sr-only">Full name</label>
+                                                <input type="text" name="name" id="name" autocomplete="name"
+                                                    placeholder="Full name" required
+                                                    class="block w-full shadow-sm  sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+
+                                            <div>
+                                                <label for="mobile-or-email" class="sr-only">
+                                                    Email</label>
+                                                <input id="email" name="email" type="email" autocomplete="email"
+                                                    placeholder="Email" required
+                                                    class="block w-full shadow-sm  sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+
+                                            <div>
+                                                <label for="password" class="sr-only">Phone Number</label>
+                                                <input type="text" name="phone" id="phone" autocomplete="tel"
+                                                    placeholder="Phone Number" required
+                                                    class="block w-full shadow-sm  sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+
+                                            <div>
+                                                <label for="interested-in" class="sr-only">Interested In</label>
+                                                <select name="" id=""
+                                                    class="block w-full shadow-sm  sm:text-sm border-gray-300 rounded-md">
+                                                    <option value="" disabled selected>Interested In</option>
+                                                    <option value="">Al-Noor Orchard</option>
+                                                    <option value="">West Marina</option>
+                                                    <option value="">Lahore Smart City</option>
+                                                    <option value="">King Park Gwadar</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <button type="submit"
+                                                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-400 ">
+                                                    Submit Information
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-6 bg-gray-50 border-t-2 border-gray-200 sm:px-10">
+                                    <p class="text-xs leading-5 text-gray-500">Expect a call from our team in 48 hours.
+                                        By signing up, you agree to our <a href="#"
+                                            class="font-medium text-gray-900 hover:underline">Privacy Policy.</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="py-16 bg-white overflow-hidden lg:py-24">
+        <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+            <svg class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4" width="404"
+                height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+                <defs>
+                    <pattern id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7" x="0" y="0" width="20" height="20"
+                        patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="784" fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)" />
+            </svg>
+
+            <div class="relative">
+                <h2 class="text-center text-2xl md:text-3xl leading-8 font-extrabold tracking-tight text-gray-900">
+                    A better way to trade properties
+                </h2>
+                <p class="mt-4 max-w-3xl mx-auto text-center text-sm md:text-xl text-gray-500">
+                    Multiple projects. Quick transfers. Web based documentations.
+                </p>
+            </div>
+
+            <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div class="relative">
+                    <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+                        About BearEstate
+                    </h3>
+                    <p class="mt-3 text-sm md:text-lg text-gray-500">
+                        BearEstate is a modern day real estate services provider, started by young
+                        entrepreneurs. BearEstate provides clients with access to plots and houses at affordable
+                        prices and has been on the forefront of providing quality real estate management to its
+                        clients.
+                    </p>
+
+                    <dl class="mt-10 space-y-10">
+                        <div class="relative">
+                            <dt>
+                                <div
+                                    class="absolute flex items-center justify-center h-8 md:h-12 w-8 md:w-12 rounded-md bg-teal-600 text-white">
+                                    <!-- Heroicon name: outline/globe-alt -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                </div>
+                                <p class="ml-10 md:ml-16 text-sm md:text-lg leading-6 font-medium text-gray-900">
+                                    Competitive Rates
+                                </p>
+                            </dt>
+                            <dd class="mt-2 ml-10 md:ml-16 text-xs md:text-base text-gray-500">
+                                Our innovative approach to projects & a pool of investors help us get you the
+                                best prices in the town. We promise that.
+                            </dd>
+                        </div>
+
+                        <div class="relative">
+                            <dt>
+                                <div
+                                    class="absolute flex items-center justify-center h-8 md:h-12 w-8 md:w-12 rounded-md bg-teal-600 text-white">
+                                    <!-- Heroicon name: outline/scale -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                                    </svg>
+                                </div>
+                                <p class="ml-10 md:ml-16 text-sm md:text-lg leading-6 font-medium text-gray-900">
+                                    No hidden
+                                    changes
+                                </p>
+                            </dt>
+                            <dd class="mt-2 ml-10 md:ml-16 text-xs md:text-base text-gray-500">
+                                We are unlike traditional real estate agents who make their quick commissions
+                                and leave you hanging with different kinds of charges. We’re here to stay long
+                                term & retain you as our partner.
+                            </dd>
+                        </div>
+
+                        <div class="relative">
+                            <dt>
+                                <div
+                                    class="absolute flex items-center justify-center h-8 md:h-12 w-8 md:w-12 rounded-md bg-teal-600 text-white">
+                                    <!-- Heroicon name: outline/lightning-bolt -->
+                                    <svg class="h-4 md:h-6 w-4 md:w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <p class="ml-10 md:ml-16 text-sm md:text-lg leading-6 font-medium text-gray-900">
+                                    Transfers are
+                                    instant</p>
+                            </dt>
+                            <dd class="mt-2 ml-10 md:ml-16 text-xs md:text-base text-gray-500">
+                                Make the payment online & get properties transferred and verified on our portal,
+                                instantly. Forgot those old papers and unnecessary visits.
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
+                    <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784"
+                        height="404" fill="none" viewBox="0 0 784 404">
+                        <defs>
+                            <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
+                                patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                            </pattern>
+                        </defs>
+                        <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
+                    </svg>
+                    <img class="relative mx-auto" width="490" src="./assets/images/map.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ]
+  }
+  ```
+-->
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+            <div class="py-10 px-6 bg-teal-700 rounded-3xl sm:py-16 sm:px-12 lg:p-20 lg:flex lg:items-center">
+                <div class="lg:w-0 lg:flex-1">
+                    <h2 class="text-lg md:text-3xl font-extrabold tracking-tight text-white">
+                        Sign up for our newsletter
+                    </h2>
+                    <p class="mt-4 max-w-3xl text-sm md:text-lg text-indigo-100">
+                        Receive monthly updates about real estate industry in Pakistan.
+                    </p>
+                </div>
+                <div class="mt-8 md:mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
+                    <form class="sm:flex">
+                        <label for="emailAddress" class="sr-only">Email address</label>
+                        <input id="emailAddress" name="emailAddress" type="email" autocomplete="email" required
+                            class="w-full border-white px-5 py-3 placeholder-gray-500 rounded-md"
+                            placeholder="Enter your email">
+                        <button type="submit"
+                            class="mt-3 w-full flex items-center justify-center px-5 py-2 md:py-3 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-teal-500 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0">
+                            Notify me
+                        </button>
+                    </form>
+                    <p class="mt-3 text-xs md:text-sm text-indigo-100">
+                        We care about the protection of your data. Read our
+                        <a href="#" class="text-white font-medium underline">
+                            Privacy Policy.
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+        <div class="absolute inset-0">
+            <div class="bg-white h-1/3 sm:h-2/3"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+                    Our Projects
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-md md:text-xl text-gray-500 sm:mt-4">
+                    Prevetted projects by the top notch real estate developers in the Pakistan.
+                </p>
+            </div>
+            <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <a href="Pricing.html" class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="./assets/images/wmarina.png" alt="">
+                        <link rel="stylesheet" href="Pricing.html">
+                    </a>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <p class="text-xs md:text-sm font-medium text-teal-600">
+                                <a href="Pricing.html" class="hover:underline">
+                                    Main Sharakpur Road, Lahore
+                                </a>
+                            </p>
+                            <a href="Pricing.html" class="block mt-2">
+                                <p class="text-md md:text-xl font-semibold text-gray-900">
+                                    West Marina (Al Noor Orchard)
+                                </p>
+                                <p class="mt-3 text-sm md:text-base text-gray-500">
+                                    West Marina is a perfect blend of modernity and serenity that offers a 72-Kanal
+                                    lake, underground electricity, lush green parks and jogging tracks, a sports complex
+                                    and gym, and much more. Residential & Commercial Plots.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                            <div class="flex-shrink-0">
+                                <a href="Pricing.html">
+                                    <span class="sr-only">A project of</span>
+                                    <img class="h-auto w-full object-cover" src="./assets/images/al-jalil-logo.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-500">
+                                    <a href="Pricing.html" class="hover:underline">
+                                        Project of
+                                    </a>
+                                </p>
+                                <div class="flex space-x-1 text-sm text-gray-900">
+                                    <p>
+                                        Al Jalil Developers
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div class="flex-shrink-0">
+                        <img class="h-auto w-full object-cover" src="./assets/images/kingsParkGwadar.png" alt="">
+                    </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <p class="text-xs md:text-sm font-medium text-teal-600">
+                                <a href="#" class="hover:underline">
+                                    Gwadar
+                                </a>
+                            </p>
+                            <a href="#" class="block mt-2">
+                                <p class="text-md md:text-xl font-semibold text-gray-900">
+                                    Kings Park Gwadar
+                                </p>
+                                <p class="mt-3 text-sm md:text-base text-gray-500">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores
+                                    porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio
+                                    animi., tempore temporibus quo laudantium.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                            <div class="flex-shrink-0">
+                                <a href="#">
+                                    <span class="sr-only">Project Of</span>
+                                    <img class="h-auto w-full object-cover" src="./assets/images/kaneez-developer.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-500">
+                                    <a href="#" class="hover:underline">
+                                        Project Of
+                                    </a>
+                                </p>
+                                <div class="flex space-x-1 text-sm text-gray-900">
+                                    <p>
+                                        Kaneez Developers
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="./assets/images/LahoreSmartCity.png" alt="">
+                    </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <p class="text-xs md:text-sm font-medium text-teal-600">
+                                <a href="#" class="hover:underline">
+                                    Lahore
+                                </a>
+                            </p>
+                            <a href="#" class="block mt-2">
+                                <p class="text-md md:text-xl font-semibold text-gray-900">
+                                    Lahore Smart City
+                                </p>
+                                <p class="mt-3 text-sm md:text-base text-gray-500">
+                                    The splendour of architecture, the grandeur of metropolitan living, smart lifestyle,
+                                    modern construction, state-of-the-art town-planning, design and civil engineering
+                                    are our building blocks
+                                </p>
+                            </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                            <div class="flex-shrink-0">
+                                <a href="#">
+                                    <span class="sr-only">Project Of</span>
+                                    <img class="h-auto w-full object-cover" src="./assets/images/lahore-city.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-500">
+                                    <a href="#" class="hover:underline">
+                                        Project Of
+                                    </a>
+                                </p>
+                                <div class="flex space-x-1 text-sm text-gray-900">
+                                    <p>
+                                        Smart City Islamabad
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <footer class="bg-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <div class="px-5 py-2">
+                    <a href="about.html" class="text-base text-gray-500 hover:text-gray-900">
+                        About
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="contact-us.html" class="text-base text-gray-500 hover:text-gray-900">
+                        <a href="Contact-us.html" class="text-base text-gray-500 hover:text-gray-900">
+                            Contact
+                        </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                        Privacy Policy
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="sign-in.html" class="text-base text-gray-500 hover:text-gray-900">
+                        Client Portal
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="Pricing.html" class="text-base text-gray-500 hover:text-gray-900">
+                        Projects
+                    </a>
+                </div>
+            </nav>
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Twitter</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-8 text-center text-base text-gray-400">
+                © 2021 BearEstate, Inc. All rights reserved.
+            </p>
+            <p class="mt-8 text-center text-base text-gray-400">
+                A project by BearPlex
+            </p>
+        </div>
+    </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

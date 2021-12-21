@@ -1,1 +1,2 @@
-# West-Marina-WebApp-Tailwind
+# bear-estate
+Bear Estate Project (Simple HTML)
